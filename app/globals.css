@@ -1,0 +1,346 @@
+:root {
+  --bg: #252e45;
+  --bg-deep: #1d2335;
+  --bg-panel: rgba(57, 69, 106, 0.72);
+  --bg-panel-strong: rgba(29, 35, 53, 0.88);
+  --text: #f5f7ff;
+  --muted: rgba(245, 247, 255, 0.75);
+  --accent: #f2de8b;
+  --accent-soft: rgba(242, 222, 139, 0.18);
+  --border: rgba(242, 222, 139, 0.2);
+  --shadow: 0 30px 80px rgba(7, 10, 18, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(57, 69, 106, 0.5), transparent 35%),
+    radial-gradient(circle at top right, rgba(242, 222, 139, 0.14), transparent 28%),
+    linear-gradient(180deg, #232b40 0%, var(--bg) 45%, var(--bg-deep) 100%);
+  color: var(--text);
+  font-family: "Franklin Gothic Medium", "Franklin Gothic", "Arial Narrow", Arial,
+    sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+::selection {
+  background: var(--accent);
+  color: #11131a;
+}
+
+.page-background {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6), transparent 90%);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(20px);
+  background: rgba(21, 26, 39, 0.72);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.site-header__inner {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand__mark {
+  display: inline-grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--bg-panel-strong), rgba(242, 222, 139, 0.22));
+  border: 1px solid var(--border);
+  color: var(--accent);
+  font-family: var(--font-display), "Franklin Gothic Medium", sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+}
+
+.brand__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  line-height: 1;
+}
+
+.brand__text span {
+  font-family: var(--font-display), "Franklin Gothic Medium", sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.brand__text small {
+  color: var(--muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.desktop-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.desktop-nav__link,
+.mobile-nav__link,
+.button {
+  transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease,
+    color 160ms ease;
+}
+
+.desktop-nav__link {
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  color: var(--muted);
+}
+
+.desktop-nav__link:hover,
+.mobile-nav__link:hover {
+  background: var(--accent-soft);
+  border-color: var(--border);
+  color: var(--text);
+  transform: translateY(-1px);
+}
+
+.mobile-nav {
+  display: none;
+  position: relative;
+}
+
+.mobile-nav summary {
+  list-style: none;
+}
+
+.mobile-nav summary::-webkit-details-marker {
+  display: none;
+}
+
+.mobile-nav__toggle {
+  padding: 12px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-panel-strong);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.mobile-nav__panel {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 12px);
+  display: grid;
+  min-width: 220px;
+  padding: 10px;
+  gap: 8px;
+  border-radius: 20px;
+  background: rgba(21, 26, 39, 0.98);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.mobile-nav__link {
+  padding: 12px 14px;
+  border-radius: 14px;
+  color: var(--text);
+}
+
+.site-page {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 56px 0 88px;
+}
+
+.hero-card,
+.feature-card {
+  border-radius: 28px;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(57, 69, 106, 0.8), rgba(29, 35, 53, 0.9));
+  box-shadow: var(--shadow);
+}
+
+.hero-card {
+  padding: clamp(28px, 4vw, 48px);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--accent);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+.page-title {
+  margin: 0;
+  max-width: 12ch;
+  font-family: var(--font-display), "Franklin Gothic Medium", sans-serif;
+  font-size: clamp(3rem, 9vw, 5.75rem);
+  line-height: 0.92;
+  letter-spacing: 0.02em;
+}
+
+.page-description {
+  max-width: 62ch;
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.content-grid {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.feature-card {
+  padding: 28px;
+}
+
+.feature-card h2 {
+  margin: 0 0 12px;
+  font-family: var(--font-display), "Franklin Gothic Medium", sans-serif;
+  font-size: 1.8rem;
+}
+
+.feature-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.feature-card--primary {
+  border-color: rgba(242, 222, 139, 0.3);
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+}
+
+.button--accent {
+  background: var(--accent);
+  color: #151823;
+}
+
+.button--ghost {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+}
+
+.link-list {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 12px;
+}
+
+.link-list li {
+  color: var(--accent);
+}
+
+.link-list a {
+  color: var(--text);
+}
+
+@media (max-width: 860px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-header__inner,
+  .site-page {
+    width: min(100% - 20px, 1120px);
+  }
+
+  .site-header__inner {
+    padding: 12px 0;
+  }
+
+  .brand__mark {
+    width: 46px;
+    height: 46px;
+  }
+
+  .brand__text span {
+    font-size: 1.15rem;
+  }
+
+  .hero-card,
+  .feature-card {
+    border-radius: 22px;
+  }
+
+  .feature-card {
+    padding: 22px;
+  }
+
+  .page-title {
+    max-width: none;
+  }
+}
