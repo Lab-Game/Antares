@@ -11,6 +11,8 @@ export default function HomePage() {
       eyebrow="FRC Team 6962"
       title="Antares builds with precision, discipline, and a dark-blue identity."
       description="A simple home base for team updates, training notes, sponsor relationships, build logs, and internal resources."
+      logoSrc="/brand/dark-logo.png"
+      logoAlt="Antares dark logo"
     >
       <div className="content-grid">
         <section className="feature-card feature-card--primary">

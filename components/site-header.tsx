@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import { siteNavigation } from "@/lib/site-navigation";
 
@@ -7,7 +8,16 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="site-header__inner">
         <Link className="brand" href="/">
-          <span className="brand__mark">6962</span>
+          <span className="brand__mark" aria-hidden="true">
+            <Image
+              className="brand__icon"
+              src="/brand/dark-icon.png"
+              alt=""
+              width={40}
+              height={40}
+              priority
+            />
+          </span>
           <span className="brand__text">
             <span>Antares</span>
             <small>FIRST Robotics Team</small>
