@@ -1,6 +1,6 @@
 :root {
-  --bg: #2c3246;
-  --bg-panel-strong: rgba(29, 35, 53, 0.88);
+  --bg: #252e45;
+  --bg-panel-strong: rgba(28, 34, 53, 0.88);
   --text: #f5f7ff;
   --muted: rgba(245, 247, 255, 0.75);
   --accent: #f2de8b;
@@ -54,8 +54,10 @@ a:hover {
   margin: 0 auto;
   padding: 16px 0;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  row-gap: 8px;
   gap: 20px;
 }
 
@@ -72,7 +74,7 @@ a:hover {
 
 .brand__icon {
   width: auto;
-  height: 44px;
+  height: 66px;
 }
 
 .brand__text {
@@ -100,6 +102,7 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  flex: 1 1 auto;
   gap: 10px;
 }
 
@@ -115,6 +118,7 @@ a:hover {
   border-radius: 999px;
   border: 1px solid transparent;
   color: var(--muted);
+  font-size: 2rem;
 }
 
 .desktop-nav__link:hover,
@@ -165,6 +169,7 @@ a:hover {
   padding: 12px 14px;
   border-radius: 14px;
   color: var(--text);
+  font-size: 2rem;
 }
 
 .site-page {
@@ -318,7 +323,7 @@ a:hover {
   }
 
   .brand__icon {
-    height: 36px;
+    height: 54px;
   }
 
   .brand__text span {
