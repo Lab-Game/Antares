@@ -11,7 +11,7 @@ export function SiteHeader() {
           <span className="brand__mark" aria-hidden="true">
             <Image
               className="brand__icon"
-              src="/brand/dark-icon.png"
+              src="/brand/transparent-icon.png"
               alt=""
               width={329}
               height={422}
