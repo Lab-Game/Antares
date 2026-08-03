@@ -13,8 +13,8 @@ export function SiteHeader() {
               className="brand__icon"
               src="/brand/dark-icon.png"
               alt=""
-              width={40}
-              height={40}
+              width={329}
+              height={422}
               unoptimized
               priority
             />

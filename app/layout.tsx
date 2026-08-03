@@ -28,7 +28,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={josefinSans.variable}>
-        <div className="page-background" />
         <SiteHeader />
         {children}
       </body>
