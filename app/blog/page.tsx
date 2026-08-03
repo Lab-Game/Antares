@@ -7,13 +7,11 @@ export default function BlogPage() {
       title="Blog"
       description="Build notes, match recaps, announcements, and behind-the-scenes progress will live here."
     >
-      <section className="feature-card">
-        <h2>Recent stories</h2>
-        <p>
-          This first pass keeps the structure ready for future posts without forcing a
-          publishing workflow yet.
-        </p>
-      </section>
+      <h2>Recent stories</h2>
+      <p>
+        This first pass keeps the structure ready for future posts without forcing a
+        publishing workflow yet.
+      </p>
     </SitePage>
   );
 }

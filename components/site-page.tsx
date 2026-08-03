@@ -3,8 +3,8 @@ import Image from "next/image";
 
 type SitePageProps = {
   eyebrow?: string;
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   children?: ReactNode;
   logoSrc?: string;
   logoAlt?: string;
@@ -20,25 +20,21 @@ export function SitePage({
 }: SitePageProps) {
   return (
     <main className="site-page">
-      <section className="hero-card">
-        {logoSrc ? (
-          <div className="hero-branding">
-            <Image
-              className="hero-branding__logo"
-              src={logoSrc}
-              alt={logoAlt ?? ""}
-              width={756}
-              height={371}
-              unoptimized
-              priority
-            />
-          </div>
-        ) : null}
-        {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
-        <h1 className="page-title">{title}</h1>
-        <p className="page-description">{description}</p>
-        {children}
-      </section>
+      {logoSrc ? (
+        <Image
+          className="site-page__logo"
+          src={logoSrc}
+          alt={logoAlt ?? ""}
+          width={756}
+          height={371}
+          unoptimized
+          priority
+        />
+      ) : null}
+      {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
+      <h1>{title}</h1>
+      <p className="lead">{description}</p>
+      {children}
     </main>
   );
 }

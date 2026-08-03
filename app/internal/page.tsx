@@ -7,13 +7,11 @@ export default function InternalPage() {
       title="Internal"
       description="This route is reserved for future team-only notes, tools, and workflows."
     >
-      <section className="feature-card">
-        <h2>Planned use</h2>
-        <p>
-          Access control is intentionally deferred for the first pass, but the route is
-          already in place.
-        </p>
-      </section>
+      <h2>Planned use</h2>
+      <p>
+        Access control is intentionally deferred for the first pass, but the route is
+        already in place.
+      </p>
     </SitePage>
   );
 }
