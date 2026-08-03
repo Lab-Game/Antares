@@ -267,6 +267,23 @@ a:hover {
   line-height: 1.7;
 }
 
+.team-photo-card {
+  grid-column: 1 / -1;
+}
+
+.team-photo-wrap {
+  margin-top: 12px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.team-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .feature-card--primary {
   border-color: rgba(242, 222, 139, 0.3);
 }

@@ -13,6 +13,11 @@ const josefinSans = Josefin_Sans({
 export const metadata: Metadata = {
   title: "Antares",
   description: "FRC Team 6962 Antares",
+  icons: {
+    icon: "/brand/dark-icon.png",
+    shortcut: "/brand/dark-icon.png",
+    apple: "/brand/dark-icon.png",
+  },
 };
 
 export default function RootLayout({

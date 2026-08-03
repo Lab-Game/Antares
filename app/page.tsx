@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import { SitePage } from "@/components/site-page";
 import { siteNavigation } from "@/lib/site-navigation";
@@ -15,6 +16,20 @@ export default function HomePage() {
       logoAlt="Antares dark logo"
     >
       <div className="content-grid">
+        <section className="feature-card team-photo-card">
+          <h2>Team Photo</h2>
+          <div className="team-photo-wrap">
+            <Image
+              className="team-photo"
+              src="/images/team-2024.webp"
+              alt="Team Antares 2024 photo"
+              width={1600}
+              height={900}
+              priority
+            />
+          </div>
+        </section>
+
         <section className="feature-card feature-card--primary">
           <h2>What this site does</h2>
           <p>

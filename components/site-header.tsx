@@ -15,12 +15,12 @@ export function SiteHeader() {
               alt=""
               width={40}
               height={40}
+              unoptimized
               priority
             />
           </span>
           <span className="brand__text">
             <span>Antares</span>
-            <small>FIRST Robotics Team</small>
           </span>
         </Link>
 
