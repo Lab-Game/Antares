@@ -7,6 +7,9 @@
   --accent-soft: rgba(242, 222, 139, 0.18);
   --border: rgba(242, 222, 139, 0.2);
   --shadow: 0 30px 80px rgba(7, 10, 18, 0.35);
+  /* Starlight glow used to highlight clickable nav items on hover/focus. */
+  --star-glow: 0 0 0 1px rgba(242, 222, 139, 0.55), 0 0 16px 2px rgba(242, 222, 139, 0.45),
+    0 0 32px 6px rgba(242, 222, 139, 0.2);
 }
 
 * {
@@ -22,8 +25,9 @@ body {
   min-height: 100vh;
   background: var(--bg);
   color: var(--text);
-  font-family: "Franklin Gothic Medium", "Franklin Gothic", "Arial Narrow", Arial,
-    sans-serif;
+  font-family: "Arial", sans-serif;
+  /* Base copy size: p, ul, and buttons inherit this since they don't set their own. */
+  font-size: 1.125rem;
 }
 
 a {
@@ -97,38 +101,11 @@ ul {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
 }
 
-.brand__mark {
-  display: inline-flex;
-  align-items: center;
-}
-
-.brand__icon {
+.brand__logo {
   width: auto;
-  height: 66px;
-}
-
-.brand__text {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  line-height: 1;
-}
-
-.brand__text span {
-  font-family: var(--font-display), "Franklin Gothic Medium", sans-serif;
-  font-size: 1.4rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.brand__text small {
-  color: var(--muted);
-  font-size: 0.8rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  height: 92px;
 }
 
 .desktop-nav {
@@ -141,9 +118,10 @@ ul {
 
 .desktop-nav__link,
 .mobile-nav__link,
+.mobile-nav__toggle,
 .button {
   transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease,
-    color 160ms ease;
+    color 160ms ease, box-shadow 200ms ease;
 }
 
 .desktop-nav__link {
@@ -156,11 +134,17 @@ ul {
 }
 
 .desktop-nav__link:hover,
-.mobile-nav__link:hover {
+.desktop-nav__link:focus-visible,
+.mobile-nav__link:hover,
+.mobile-nav__link:focus-visible,
+.mobile-nav__toggle:hover,
+.mobile-nav__toggle:focus-visible {
   background: var(--accent-soft);
-  border-color: var(--border);
+  border-color: var(--accent);
   color: var(--text);
   transform: translateY(-1px);
+  box-shadow: var(--star-glow);
+  outline: none;
 }
 
 .mobile-nav {
@@ -203,6 +187,7 @@ ul {
 .mobile-nav__link {
   padding: 12px 14px;
   border-radius: 14px;
+  border: 1px solid transparent;
   color: var(--text);
   font-family: var(--font-display), "Franklin Gothic Medium", sans-serif;
   font-size: 2rem;
@@ -232,15 +217,21 @@ ul {
 
 .lead {
   max-width: 62ch;
-  font-size: 1.08rem;
+  font-size: 1.3rem;
+}
+
+/* Fixed-ratio frame so swapping in a differently-sized photo never needs code changes. */
+.photo-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 0 0 1em;
+  border-radius: 16px;
+  overflow: hidden;
 }
 
 .photo {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 16px;
-  margin: 0 0 1em;
+  object-fit: cover;
 }
 
 .actions {
@@ -290,12 +281,8 @@ ul {
     padding: 12px 0;
   }
 
-  .brand__icon {
-    height: 54px;
-  }
-
-  .brand__text span {
-    font-size: 1.15rem;
+  .brand__logo {
+    height: 68px;
   }
 
   .site-page__logo {

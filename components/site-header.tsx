@@ -8,20 +8,15 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="site-header__inner">
         <Link className="brand" href="/">
-          <span className="brand__mark" aria-hidden="true">
-            <Image
-              className="brand__icon"
-              src="/brand/transparent-icon.png"
-              alt=""
-              width={329}
-              height={422}
-              unoptimized
-              priority
-            />
-          </span>
-          <span className="brand__text">
-            <span>Antares</span>
-          </span>
+          <Image
+            className="brand__logo"
+            src="/brand/transparent-logo.png"
+            alt="Antares"
+            width={1027}
+            height={600}
+            unoptimized
+            priority
+          />
         </Link>
 
         <nav className="desktop-nav" aria-label="Primary">
