@@ -199,27 +199,6 @@ ul {
   padding: 56px 0 88px;
 }
 
-.site-page__logo {
-  display: block;
-  width: min(320px, 100%);
-  height: auto;
-  margin-bottom: 20px;
-}
-
-.eyebrow {
-  margin: 0 0 12px;
-  color: var(--accent);
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  font-family: var(--font-display), "Franklin Gothic Medium", sans-serif;
-  font-size: 0.78rem;
-}
-
-.lead {
-  max-width: 62ch;
-  font-size: 1.3rem;
-}
-
 /* Fixed-ratio frame so swapping in a differently-sized photo never needs code changes. */
 .photo-frame {
   position: relative;
@@ -283,10 +262,6 @@ ul {
 
   .brand__logo {
     height: 68px;
-  }
-
-  .site-page__logo {
-    width: min(260px, 100%);
   }
 
   h1 {
