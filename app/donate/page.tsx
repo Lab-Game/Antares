@@ -3,9 +3,50 @@ export default function DonatePage() {
     <main className="site-page">
       <h1>Donate</h1>
       <p>
-        Donations can go toward parts, travel, event fees, tools, and the resources the
-        team needs to stay competitive.
+        We greatly appreciate donations to support our team!
       </p>
+      <p>There are many ways to donate, which are listed below.  All your donations to Antares via
+        Khan Lab School, a 501(c)(3) organization, are tax-deductible.
+      </p>
+
+      <p><b>IMPORTANT:</b>  Please email <a href="mailto:donate@team6962.com">donate@team6962.com</a>
+        and <a href="mailto:donate@khanlabschool.org">donate@khanlabschool.org</a> with
+        the Donor's name, gift amount (and any expected employer matching), and method
+        of gift so we can properly account for and allocate gifts.</p>
+
+      <ul>
+        <li><b>Check</b>
+          <ul>
+            <li>Payable to: <b>Khan Lab School</b>.</li>
+            <li>Memo: <b>Antares, Team 6962</b></li>
+            <li>Mail to: Khan Lab School, 1200 Villa Street #100, Mountain View, CA 94041</li>
+          </ul>
+        </li>
+        <li><b>Employer Donation Portal with Matching or Donor-Advised Funds</b>
+          <ul>
+            <li>Please inquire with your employer for donation and matching procedures</li>
+            <li>Donation recipient: “Khan Lab School” (Tax ID/EIN: 46-5742553)</li>
+            <li>Please be certain to indicate “Antares, Team 6962” in any memo or notes.</li>
+          </ul>
+        </li>
+        <li><b>Online</b>
+          <ul>
+            <li>Visit <a href="https://khanlabschool.org/Giving">Khan Lab School's donation page</a></li>
+          </ul>
+        </li>
+        <li><b>Appreciated Stock</b>
+          <ul>
+            <li>Please contact <a href="mailto:donate@team6962.com">donate@team6962.com</a>
+                and <a href="mailto:donate@khanlabschool.org">donate@khanlabschool.org</a> for instructions</li>
+          </ul>
+        </li>
+        <li><b>In-Kind Donations</b>
+          <ul>
+            <li>Please contact donate@team6962.com to discuss.</li>
+          </ul>
+        </li>
+
+      </ul>
     </main>
   );
 }

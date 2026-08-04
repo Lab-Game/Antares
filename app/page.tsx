@@ -19,6 +19,12 @@ export default function HomePage() {
           sizes="(min-width: 760px) 760px, 100vw"
         />
       </div>
+
+      <p style={{ textAlign: "center", marginTop: "1rem", fontSize: "0.9rem" }}>
+        <a href="mailto:contact@team6962.com">contact@team6962.com</a><br />
+        1200 Villa Street<br />
+        Mountain View, CA 94041
+      </p>
     </main>
   );
 }

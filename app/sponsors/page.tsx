@@ -3,9 +3,26 @@ export default function SponsorsPage() {
     <main className="site-page">
       <h1>Sponsors</h1>
       <p>
-        Robotics costs add up quickly. This page can later list sponsor tiers, logos,
-        thank-you notes, and season impact metrics.
+        Thank you to our generous sponsors, who make our team possible!
       </p>
+      <img
+        src="/images/PowerTec-logo.svg"
+        alt="PowerTec Logo"
+        width="80%"
+        style={{ backgroundColor: "white", padding: "2rem", margin: "2rem" }}
+      />
+      <img
+        src="/images/CMS-logo.webp"
+        alt="CMS Logo"
+        width="80%"
+        style={{ backgroundColor: "white", padding: "2rem", margin: "2rem" }}
+      /><br />
+      <img
+        src="/images/SmugMug-logo.svg"
+        alt="SmugMug Logo"
+        width="80%"
+        style={{ backgroundColor: "white", padding: "2rem", margin: "2rem" }}
+      />
     </main>
   );
 }
