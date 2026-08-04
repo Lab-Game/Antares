@@ -5,14 +5,15 @@ export default function DonatePage() {
       <p>
         We greatly appreciate donations to support our team!
       </p>
-      <p>There are many ways to donate, which are listed below.  All your donations to Antares via
+
+      <p>Please email <a href="mailto:donate@team6962.com">donate@team6962.com</a>
+        and <a href="mailto:donate@khanlabschool.org">donate@khanlabschool.org</a> with
+        the donor's name, gift amount (and any expected employer matching), and method
+        of gift so we can properly account for and allocate gifts.</p>
+
+      <p>There are several ways to donate, which are listed below.  All your donations to Antares via
         Khan Lab School, a 501(c)(3) organization, are tax-deductible.
       </p>
-
-      <p><b>IMPORTANT:</b>  Please email <a href="mailto:donate@team6962.com">donate@team6962.com</a>
-        and <a href="mailto:donate@khanlabschool.org">donate@khanlabschool.org</a> with
-        the Donor's name, gift amount (and any expected employer matching), and method
-        of gift so we can properly account for and allocate gifts.</p>
 
       <ul>
         <li><b>Check</b>
