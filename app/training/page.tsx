@@ -155,6 +155,24 @@ const electricalVideos = [
   },
 ];
 
+const wiringVideos = [
+  {
+    title: "Introduction to Wiring",
+    description:
+      `We'll frame the problem of wiring an FRC robot.  The goal is to secure a few hundred wires, connections,
+      and devices in a cramped space full of moving parts to enable both efficient power transfer and data
+      communication with zero failures over prolonged operation in abusive environment.  To achieve this goal,
+      we'll counsel against fixating on a particular widget variety (Molex SL vs. soldering vs. WAGO, etc.) and
+      for rigorous procedures to identify and mitigate threats to electrical reliability.`,
+      youtubeId: "dQw4w9WgXcQ",
+  },
+  {
+    title: "Wires",
+    description:
+      `We'll review the basics of wire, including conductor, gauge, strangds, insulation, resistance, and color.`,
+      youtubeId: "dQw4w9WgXcQ",
+  },
+
 export default function TrainingPage() {
   return (
     <main className="site-page">
