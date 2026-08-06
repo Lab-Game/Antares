@@ -187,6 +187,7 @@ const wiringVideos = [
       `We'll look at USB and Ethernet wire bundles, including versions, connectors, and shielding.`,
       youtubeId: "dQw4w9WgXcQ",
   },
+];
 
 
 export default function TrainingPage() {
