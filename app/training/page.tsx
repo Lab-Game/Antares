@@ -187,6 +187,32 @@ const wiringVideos = [
       `We'll look at USB and Ethernet wire bundles, including versions, connectors, and shielding.`,
       youtubeId: "dQw4w9WgXcQ",
   },
+  {
+    title: "Zip Ties",
+    description:
+      `Zip ties seem simple, but these humble fasterners are so critical to secure robot wiring that the nuances are worth
+      understanding.  We'll look at sizes, getting a secure grip, removal, and safety.`,
+    youtubeId: "dQw4w9WgXcQ"
+  },
+  {
+    title: "Ten Basic Principles of Secure Wiring",
+    description:
+      `Plan placement of electrical components and wire paths during design.  Minimize electrical connections.
+      Practice your connection technique.  Minimize widgets on
+      conductive paths.  Bundle wires and then secure bundles to structure at close intervals.  Put slack and strain relief
+      next to each connection.  Secure wires close to moving parts.  No airborne wires.  Treat corners as wire strippers.
+      Beware electromagnetic interference.  Use large, tight connections for power.  RTFDS.  Focus on wires crossing between
+      moving parts.  Keep a high bending radius.  No connectors in drag chains.`,
+      youtubeId: "dQw4w9WgXcQ"
+  },
+  {
+    title: "Debugging CAN",
+    description:
+      `CAN problems are common and annoying.  We'll go over some quick tricks to identify and correct issues.
+      Keep access points, especially at ends.  Resistance between green and yellow should be 60 ohms.  Check
+      continuity at access points.  Resistance to frame should be large.  Check CAN IDs.`,
+      youtubeId: "dQw4w9WgXcQ"
+  },
 ];
 
 export default function TrainingPage() {
