@@ -167,11 +167,27 @@ const wiringVideos = [
       youtubeId: "dQw4w9WgXcQ",
   },
   {
-    title: "Wires",
+    title: "Threats",
     description:
-      `We'll review the basics of wire, including conductor, gauge, strangds, insulation, resistance, and color.`,
+      `In this video, we'll talk about threats to the integrity of the electrical system:  loose connections, undersized wiring,
+      improperly-assembled connectors, broken connectors, physical blows, G-forces, ingestion into mechanical components,
+      metal fatigue, and insulation damage from abrasion.  Defending against these factors will motivate our subsequent
+      discussion of wiring practices.`,
       youtubeId: "dQw4w9WgXcQ",
   },
+  {
+    title: "Wires",
+    description:
+      `We'll review the basics of plain wire: conductive material, resistance, gauge, flexibility strands, insulation, and color.`,
+      youtubeId: "dQw4w9WgXcQ",
+  },
+  {
+    title: "Data Wires",
+    description:
+      `We'll look at USB and Ethernet wire bundles, including versions, connectors, and shielding.`,
+      youtubeId: "dQw4w9WgXcQ",
+  },
+
 
 export default function TrainingPage() {
   return (
