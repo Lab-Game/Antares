@@ -208,11 +208,28 @@ const wiringVideos = [
   {
     title: "Debugging CAN",
     description:
-      `CAN problems are common and annoying.  We'll go over some quick tricks to identify and correct issues.
-      Keep access points, especially at ends.  Resistance between green and yellow should be 60 ohms.  Check
-      continuity at access points.  Resistance to frame should be large.  Check CAN IDs.`,
+      `CAN problems are common and annoying.  We'll go over some quick tricks to identify and correct issues.`,
       youtubeId: "dQw4w9WgXcQ"
   },
+];
+
+const simulationVideos = [
+  {
+    title: "Introduction to Simulation",
+    description:
+      `This video series explains how to build a mathematical model of a robot subsystem.  A simulation can be
+      useful when weighing design tradeoffs and for offline testing of control algorithms.  And constructing a
+      simulation forces you to deeply understand the mechanical and electrical physics of your robot.
+      We'll use simple incarnations of a flywheel, elevator, arm, and drivetrain as examples.`,
+      youtubeId: "dQw4w9WgXcQ",
+  },
+  {
+    title: "Modeling a Motor",
+    description:
+      `We'll first model a brushed DC motor, by far the most common type in FRC.  This model will be a
+      common component across all subsystem models.`,
+      youtubeId: "dQw4w9WgXcQ",
+  }
 ];
 
 export default function TrainingPage() {
