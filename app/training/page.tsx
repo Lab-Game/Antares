@@ -195,7 +195,7 @@ const wiringVideos = [
     youtubeId: "dQw4w9WgXcQ"
   },
   {
-    title: "Ten Basic Principles of Secure Wiring",
+    title: "Ten Principles of Secure Wiring",
     description:
       `Plan placement of electrical components and wire paths during design.  Minimize electrical connections.
       Practice your connection technique.  Minimize widgets on
@@ -238,17 +238,25 @@ export default function TrainingPage() {
       <h1>Training</h1>
       <h2>Mechanical</h2>
       {mechanicalVideos.map((video) => (
-        <VideoCard key={video.youtubeId} {...video} />
+        <VideoCard key={video.youtubeId + video.title} {...video} />
       ))}
       <h2>Electrical</h2>
       {electricalVideos.map((video) => (
-        <VideoCard key={video.youtubeId} {...video} />
+        <VideoCard key={video.youtubeId + video.title} {...video} />
+      ))}
+      <h2>Wiring</h2>
+      {wiringVideos.map((video) => (
+        <VideoCard key={video.youtubeId + video.title} {...video} />
       ))}
       <h2>Motors</h2>
       <h2>Simulation</h2>
+      {simulationVideos.map((video) => (
+        <VideoCard key={video.youtubeId + video.title} {...video} />
+      ))}
       <h2>Code</h2>
       <h2>Control</h2>
       <h2>Fabrication</h2>
+      <h2>Leadership</h2>
     </main>
   );
 }
