@@ -3,7 +3,7 @@ export default function DonatePage() {
     <main className="site-page">
       <h1>Donate</h1>
       <p>
-        We greatly appreciate donations to support our team!
+        We appreciate donations to support our team!
       </p>
 
       <p>Please email <a href="mailto:donate@team6962.com">donate@team6962.com</a>

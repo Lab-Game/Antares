@@ -1,8 +1,9 @@
-export const siteNavigation = [
-  { href: "/", label: "Home" },
-  { href: "/sponsors", label: "Sponsors" },
+import type { Route } from "next";
+
+export const siteNavigation: { href: Route; label: string }[] = [
   { href: "/training", label: "Training" },
-  { href: "/blog", label: "Blog" },
+  { href: "/history", label: "History" },
+  { href: "/sponsors", label: "Sponsors" },
   { href: "/donate", label: "Donate" },
   { href: "/internal", label: "Internal" },
-] as const;
+];

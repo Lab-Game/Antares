@@ -236,27 +236,69 @@ export default function TrainingPage() {
   return (
     <main className="site-page">
       <h1>Training</h1>
-      <h2>Mechanical</h2>
+
+      <p>Training videos are arranged in courses.  Dependendencies are listed below.</p>
+
+      <ul>
+        <li><a href="#mechanical">Mechanical</a></li>
+        <li><a href="#electrical">Electrical</a></li>
+        <li><a href="#wiring">Wiring</a></li>
+        <li><a href="#motors">Motors</a></li>
+        <li><a href="#simulation">Simulation</a></li>
+        <li><a href="#code">Code</a></li>
+        <li><a href="#control">Control</a></li>
+        <li><a href="#fabrication">Fabrication</a></li>
+        <li><a href="#leadership">Leadership</a></li>
+      </ul>
+
+      <hr />
+
+      <h2 id="mechanical">Mechanical</h2>
       {mechanicalVideos.map((video) => (
         <VideoCard key={video.youtubeId + video.title} {...video} />
       ))}
-      <h2>Electrical</h2>
+
+      <hr />
+
+      <h2 id="electrical">Electrical</h2>
       {electricalVideos.map((video) => (
         <VideoCard key={video.youtubeId + video.title} {...video} />
       ))}
-      <h2>Wiring</h2>
+
+      <hr />
+
+      <h2 id="wiring">Wiring</h2>
       {wiringVideos.map((video) => (
         <VideoCard key={video.youtubeId + video.title} {...video} />
       ))}
-      <h2>Motors</h2>
-      <h2>Simulation</h2>
+
+      <hr />
+
+      <h2 id="motors">Motors</h2>
+
+      <hr />
+
+      <h2 id="simulation">Simulation</h2>
       {simulationVideos.map((video) => (
         <VideoCard key={video.youtubeId + video.title} {...video} />
       ))}
-      <h2>Code</h2>
-      <h2>Control</h2>
-      <h2>Fabrication</h2>
-      <h2>Leadership</h2>
+
+      <hr />
+
+      <h2 id="code">Code</h2>
+
+      <hr />
+
+      <h2 id="control">Control</h2>
+
+      <hr />
+
+      <h2 id="fabrication">Fabrication</h2>
+
+      <hr />
+
+      <h2 id="leadership">Leadership</h2>
+
     </main>
   );
 }

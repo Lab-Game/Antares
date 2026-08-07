@@ -6,19 +6,19 @@ export default function SponsorsPage() {
         Thank you to our generous sponsors, who make our team possible!
       </p>
       <img
-        src="/images/PowerTec-logo.svg"
+        src="/sponsor-logos/PowerTec-logo.svg"
         alt="PowerTec Logo"
         width="80%"
         style={{ backgroundColor: "white", padding: "2rem", margin: "2rem" }}
       />
       <img
-        src="/images/CMS-logo.webp"
+        src="/sponsor-logos/CMS-logo.webp"
         alt="CMS Logo"
         width="80%"
         style={{ backgroundColor: "white", padding: "2rem", margin: "2rem" }}
       /><br />
       <img
-        src="/images/SmugMug-logo.svg"
+        src="/sponsor-logos/SmugMug-logo.svg"
         alt="SmugMug Logo"
         width="80%"
         style={{ backgroundColor: "white", padding: "2rem", margin: "2rem" }}
