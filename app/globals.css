@@ -202,6 +202,57 @@ ul {
   padding: 56px 0 88px;
 }
 
+/* A click-to-show year switcher built from radio buttons, no JavaScript required. */
+.year-tabs__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 24px;
+}
+
+.year-tabs__label {
+  position: relative;
+  display: inline-flex;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  cursor: pointer;
+  font-family: var(--font-display), "Franklin Gothic Medium", sans-serif;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease,
+    box-shadow 200ms ease;
+}
+
+.year-tabs__label input {
+  position: absolute;
+  opacity: 0;
+}
+
+.year-tabs__label:hover,
+.year-tabs__label:has(:checked) {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.year-tabs__label:has(:focus-visible) {
+  box-shadow: var(--star-glow);
+}
+
+.year-tabs__panel {
+  display: none;
+}
+
+/* Show the panel whose id matches the checked year's radio button. */
+.year-tabs:has(#year-2027:checked) #year-2027-content,
+.year-tabs:has(#year-2026:checked) #year-2026-content,
+.year-tabs:has(#year-2025:checked) #year-2025-content,
+.year-tabs:has(#year-2024:checked) #year-2024-content,
+.year-tabs:has(#year-2023:checked) #year-2023-content,
+.year-tabs:has(#year-2022:checked) #year-2022-content {
+  display: block;
+}
+
 /* Fixed-ratio frame so swapping in a differently-sized photo never needs code changes. */
 .photo-frame {
   position: relative;
