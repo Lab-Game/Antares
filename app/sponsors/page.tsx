@@ -1,7 +1,6 @@
 export default function SponsorsPage() {
   return (
     <main className="site-page">
-      <h1>Sponsors</h1>
       <p>
         Thank you to our generous sponsors, who make our team possible!
       </p>

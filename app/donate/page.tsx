@@ -1,7 +1,6 @@
 export default function DonatePage() {
   return (
     <main className="site-page">
-      <h1>Donate</h1>
       <p>
         We appreciate donations to support our team!
       </p>

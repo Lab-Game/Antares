@@ -1,9 +1,14 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 import { siteNavigation } from "@/lib/site-navigation";
 
 export function SiteHeader() {
+  const pathname = usePathname();
+
   return (
     <header className="site-header">
       <div className="site-header__inner">
@@ -21,7 +26,11 @@ export function SiteHeader() {
 
         <nav className="desktop-nav" aria-label="Primary">
           {siteNavigation.map((item) => (
-            <Link key={item.href} className="desktop-nav__link" href={item.href}>
+            <Link
+              key={item.href}
+              className={`desktop-nav__link${pathname === item.href ? " is-active" : ""}`}
+              href={item.href}
+            >
               {item.label}
             </Link>
           ))}
@@ -31,7 +40,11 @@ export function SiteHeader() {
           <summary className="mobile-nav__toggle">Menu</summary>
           <nav className="mobile-nav__panel" aria-label="Primary mobile">
             {siteNavigation.map((item) => (
-              <Link key={item.href} className="mobile-nav__link" href={item.href}>
+              <Link
+                key={item.href}
+                className={`mobile-nav__link${pathname === item.href ? " is-active" : ""}`}
+                href={item.href}
+              >
                 {item.label}
               </Link>
             ))}

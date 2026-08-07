@@ -235,8 +235,6 @@ const simulationVideos = [
 export default function TrainingPage() {
   return (
     <main className="site-page">
-      <h1>Training</h1>
-
       <p>Training videos are arranged in courses.  Dependendencies are listed below.</p>
 
       <ul>

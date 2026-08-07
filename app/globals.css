@@ -14,6 +14,12 @@
   /* Starlight glow used to highlight clickable nav items on hover/focus. */
   --star-glow: 0 0 0 1px rgba(242, 222, 139, 0.55), 0 0 16px 2px rgba(242, 222, 139, 0.45),
     0 0 32px 6px rgba(242, 222, 139, 0.2);
+  /* Height of the sticky .site-header, kept in sync with it so anchor jumps clear the nav bar. */
+  --header-height: 125px;
+}
+
+html {
+  scroll-padding-top: calc(var(--header-height) + 16px);
 }
 
 * {
@@ -138,8 +144,10 @@ ul {
 
 .desktop-nav__link:hover,
 .desktop-nav__link:focus-visible,
+.desktop-nav__link.is-active,
 .mobile-nav__link:hover,
 .mobile-nav__link:focus-visible,
+.mobile-nav__link.is-active,
 .mobile-nav__toggle:hover,
 .mobile-nav__toggle:focus-visible {
   background: var(--accent-soft);
@@ -200,6 +208,32 @@ ul {
   width: min(760px, calc(100% - 32px));
   margin: 0 auto;
   padding: 56px 0 88px;
+}
+
+/* No shaping/background here so it doesn't read as its own boxed panel against the page. */
+.doc-embed {
+  position: relative;
+}
+
+.doc-embed__frame {
+  display: block;
+  width: 100%;
+  height: 40vh;
+  border: none;
+  background: transparent;
+  /* Match the embedded (light-scheme) Google Doc so the UA doesn't force an opaque white canvas behind it. */
+  color-scheme: light;
+}
+
+/* Hints that there's more to scroll to without covering the iframe's own scrollbar/interaction. */
+.doc-embed__fade {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 96px;
+  background: linear-gradient(to bottom, transparent, var(--bg));
+  pointer-events: none;
 }
 
 /* A click-to-show year switcher built from radio buttons, no JavaScript required. */
@@ -278,6 +312,75 @@ ul {
   background: var(--bg-panel-strong);
 }
 
+.season-card {
+  padding: 20px 24px 24px;
+  margin: 0 0 20px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--bg-panel-strong);
+}
+
+.season-card__title {
+  margin: 0;
+}
+
+.season-card__year {
+  color: var(--accent);
+}
+
+.season-card__body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.season-card__image {
+  position: relative;
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.season-card__image img {
+  object-fit: contain;
+}
+
+.season-card__columns {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 220px;
+  gap: 24px;
+}
+
+.season-card__section-title {
+  margin: 0 0 0.5em;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.season-card__links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.season-card__empty {
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-style: italic;
+}
+
 .video-card__info {
   flex: 1 1 auto;
   min-width: 0;
@@ -318,6 +421,10 @@ ul {
 }
 
 @media (max-width: 640px) {
+  :root {
+    --header-height: 93px;
+  }
+
   .site-header__inner,
   .site-page {
     width: min(100% - 20px, 1120px);
