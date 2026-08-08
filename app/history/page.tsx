@@ -2,7 +2,7 @@ import { SeasonCard } from "@/components/season-card";
 
 // Add a season by appending one entry below; image/blogPosts/links are all optional.
 const seasons = [
-    {
+  {
     year: "2027",
     name: "BioCore",
   },

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type VideoCardProps = {
   title: string;
   description: string;
@@ -18,11 +20,12 @@ export function VideoCard({ title, description, youtubeId }: VideoCardProps) {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img
+        <Image
           src={`https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`}
           alt={`${title} video thumbnail`}
           width={200}
           height={150}
+          unoptimized
         />
       </a>
     </div>

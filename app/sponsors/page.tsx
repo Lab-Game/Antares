@@ -1,26 +1,31 @@
+import Image from "next/image";
+
 export default function SponsorsPage() {
   return (
     <main className="site-page">
       <p>
         Thank you to our generous sponsors, who make our team possible!
       </p>
-      <img
+      <Image
+        className="sponsor-logo"
         src="/sponsor-logos/PowerTec-logo.svg"
         alt="PowerTec Logo"
-        width="80%"
-        style={{ backgroundColor: "white", padding: "2rem", margin: "2rem" }}
+        width={1280}
+        height={180}
       />
-      <img
+      <Image
+        className="sponsor-logo"
         src="/sponsor-logos/CMS-logo.webp"
         alt="CMS Logo"
-        width="80%"
-        style={{ backgroundColor: "white", padding: "2rem", margin: "2rem" }}
-      /><br />
-      <img
+        width={998}
+        height={366}
+      />
+      <Image
+        className="sponsor-logo"
         src="/sponsor-logos/SmugMug-logo.svg"
         alt="SmugMug Logo"
-        width="80%"
-        style={{ backgroundColor: "white", padding: "2rem", margin: "2rem" }}
+        width={550}
+        height={119}
       />
     </main>
   );

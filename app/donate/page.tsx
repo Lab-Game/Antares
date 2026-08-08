@@ -6,8 +6,8 @@ export default function DonatePage() {
       </p>
 
       <p>Please email <a href="mailto:donate@team6962.com">donate@team6962.com</a>
-        and <a href="mailto:donate@khanlabschool.org">donate@khanlabschool.org</a> with
-        the donor's name, gift amount (and any expected employer matching), and method
+        {" "}and <a href="mailto:donate@khanlabschool.org">donate@khanlabschool.org</a> with
+        the donor&apos;s name, gift amount (and any expected employer matching), and method
         of gift so we can properly account for and allocate gifts.</p>
 
       <p>There are several ways to donate, which are listed below.  All your donations to Antares via
@@ -31,21 +31,20 @@ export default function DonatePage() {
         </li>
         <li><b>Online</b>
           <ul>
-            <li>Visit <a href="https://khanlabschool.org/Giving">Khan Lab School's donation page</a></li>
+            <li>Visit <a href="https://khanlabschool.org/Giving">Khan Lab School&apos;s donation page</a></li>
           </ul>
         </li>
         <li><b>Appreciated Stock</b>
           <ul>
             <li>Please contact <a href="mailto:donate@team6962.com">donate@team6962.com</a>
-                and <a href="mailto:donate@khanlabschool.org">donate@khanlabschool.org</a> for instructions</li>
+                {" "}and <a href="mailto:donate@khanlabschool.org">donate@khanlabschool.org</a> for instructions</li>
           </ul>
         </li>
         <li><b>In-Kind Donations</b>
           <ul>
-            <li>Please contact donate@team6962.com to discuss.</li>
+            <li>Please contact <a href="mailto:donate@team6962.com">donate@team6962.com</a> to discuss.</li>
           </ul>
         </li>
-
       </ul>
     </main>
   );
