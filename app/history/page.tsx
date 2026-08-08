@@ -5,6 +5,24 @@ const seasons = [
   {
     year: "2027",
     name: "BioCore",
+    blogPosts: [
+      {
+        label: "Pre-Season",
+        href: "https://docs.google.com/document/d/1V-Im31zFGo_coVZop82ItUPRIz8JuNgjPoxAJzR_sv8/preview",
+      },
+      {
+        label: "Week 1",
+        href: "https://docs.google.com/document/d/1SvJyobxlLf8fYxCimZlJNOBXJwD3oTegwxf4R9baoMo/preview",
+      },
+      {
+        label: "Week 2",
+        href: "https://docs.google.com/document/d/1U9Y4P0SCUdubb-AE1MZKU8XMMxqKfBTgOY7NDBzsZnU/preview",
+      },
+      {
+        label: "Week 3",
+        href: "https://docs.google.com/document/d/1yF3X6UrQMm3FFEmn6YP3EattiMSmcEPaUboGkobUFTM/preview",
+      },
+    ]
   },
   {
     year: "2026",
