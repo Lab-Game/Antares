@@ -1,4 +1,4 @@
-import { VideoCard } from "@/components/video-card";
+import { VideoCard } from "@/app/training/video-card";
 
 // Add a video to a category by appending one entry to its array below.
 const mechanicalVideos = [

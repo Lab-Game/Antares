@@ -1,4 +1,4 @@
-import { SeasonCard } from "@/components/season-card";
+import { SeasonCard } from "@/app/history/season-card";
 
 // Add a season by appending one entry below; image/blogPosts/links are all optional.
 const seasons = [
