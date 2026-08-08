@@ -235,21 +235,6 @@ const simulationVideos = [
 export default function TrainingPage() {
   return (
     <main className="site-page">
-      <p>Training videos are arranged in courses.  Dependendencies are listed below.</p>
-
-      <ul>
-        <li><a href="#mechanical">Mechanical</a></li>
-        <li><a href="#electrical">Electrical</a></li>
-        <li><a href="#wiring">Wiring</a></li>
-        <li><a href="#motors">Motors</a></li>
-        <li><a href="#simulation">Simulation</a></li>
-        <li><a href="#code">Code</a></li>
-        <li><a href="#control">Control</a></li>
-        <li><a href="#fabrication">Fabrication</a></li>
-        <li><a href="#leadership">Leadership</a></li>
-      </ul>
-
-      <hr />
 
       <h2 id="mechanical">Mechanical</h2>
       {mechanicalVideos.map((video) => (

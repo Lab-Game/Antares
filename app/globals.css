@@ -215,10 +215,24 @@ ul {
   position: relative;
 }
 
+/* Small, muted link tucked right under a section heading, e.g. a link to edit the source doc. */
+.section-edit-link {
+  display: block;
+  margin: -0.9em 0 1.4em;
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.section-edit-link:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
 .doc-embed__frame {
   display: block;
   width: 100%;
-  height: 40vh;
+  height: 30vh;
   border: none;
   background: transparent;
   /* Match the embedded (light-scheme) Google Doc so the UA doesn't force an opaque white canvas behind it. */
@@ -234,6 +248,16 @@ ul {
   height: 96px;
   background: linear-gradient(to bottom, transparent, var(--bg));
   pointer-events: none;
+}
+
+.calendar-embed__frame {
+  display: block;
+  width: 100%;
+  height: 600px;
+  border: none;
+  background: transparent;
+  /* Match the embedded (light-scheme) Google Calendar so the UA doesn't force an opaque white canvas behind it. */
+  color-scheme: light;
 }
 
 /* A click-to-show year switcher built from radio buttons, no JavaScript required. */
