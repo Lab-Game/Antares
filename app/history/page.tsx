@@ -5,6 +5,7 @@ const seasons = [
   {
     year: "2027",
     name: "BioCore",
+    image: { src: "/robot-images/2027-preview.jpeg", alt: "2027 preview" },
     blogPosts: [
       {
         label: "Pre-Season",
