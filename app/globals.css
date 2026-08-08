@@ -260,6 +260,92 @@ ul {
   color-scheme: light;
 }
 
+.issue-frame {
+  max-height: 620px;
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-panel-strong);
+  box-shadow: var(--shadow);
+  scrollbar-color: var(--brand-light-blue) transparent;
+}
+
+.issue-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.issue-list__item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 20px;
+  border-bottom: 1px solid rgba(242, 222, 139, 0.12);
+}
+
+.issue-list__item:last-child {
+  border-bottom: 0;
+}
+
+.issue-list__main {
+  min-width: 0;
+}
+
+.issue-list__title {
+  color: var(--text);
+  font-family: var(--font-display), "Franklin Gothic Medium", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.issue-list__title:hover {
+  text-decoration: underline;
+}
+
+.issue-list__details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.issue-list__labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.issue-list__label {
+  padding: 3px 7px;
+  border: 1px solid rgba(242, 222, 139, 0.3);
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.68rem;
+  line-height: 1.2;
+}
+
+.issue-list__comments {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.issue-frame__empty {
+  margin: 0;
+  padding: 24px;
+}
+
 /* Fixed-ratio frame so swapping in a differently-sized photo never needs code changes. */
 .photo-frame {
   position: relative;
@@ -430,5 +516,15 @@ ul {
 
   .video-card__thumb {
     width: 100%;
+  }
+
+  .issue-list__item {
+    display: block;
+    padding: 16px;
+  }
+
+  .issue-list__comments {
+    display: block;
+    margin-top: 10px;
   }
 }
