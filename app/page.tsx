@@ -12,7 +12,7 @@ export default function HomePage() {
       <div className="photo-frame">
         <Image
           className="photo"
-          src="/images/team-2026.webp"
+          src="/team-photos/team-2026.webp"
           alt="Antares team photo"
           fill
           priority
