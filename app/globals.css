@@ -115,7 +115,7 @@ ul {
 
 .brand__logo {
   width: auto;
-  height: 92px;
+  height: 75px; /* was 92 */
 }
 
 .desktop-nav {

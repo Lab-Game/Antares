@@ -15,10 +15,10 @@ export function SiteHeader() {
         <Link className="brand" href="/">
           <Image
             className="brand__logo"
-            src="/brand/transparent-logo.png"
+            src="/brand/transparent-icon.png"
             alt="Antares"
-            width={1027}
-            height={600}
+            width={164}
+            height={211}
             unoptimized
             priority
           />
