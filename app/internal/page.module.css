@@ -1,0 +1,141 @@
+.editLink {
+  display: block;
+  margin: -0.9em 0 1.4em;
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+.editLink:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.document {
+  position: relative;
+}
+
+.documentFrame,
+.calendarFrame {
+  display: block;
+  width: 100%;
+  border: none;
+  background: transparent;
+  color-scheme: light;
+}
+
+.documentFrame {
+  height: 50vh;
+}
+
+.documentFade {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 96px;
+  background: linear-gradient(to bottom, transparent, var(--bg));
+  pointer-events: none;
+}
+
+.calendarFrame {
+  height: 600px;
+}
+
+.issueFrame {
+  max-height: 620px;
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-panel-strong);
+  box-shadow: var(--shadow);
+  scrollbar-color: var(--brand-light-blue) transparent;
+}
+
+.issueList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.issueItem {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 20px;
+  border-bottom: 1px solid rgba(242, 222, 139, 0.12);
+}
+
+.issueItem:last-child {
+  border-bottom: 0;
+}
+
+.issueMain {
+  min-width: 0;
+}
+
+.issueTitle {
+  color: var(--text);
+  font-family: var(--font-display), "Franklin Gothic Medium", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.issueTitle:hover {
+  text-decoration: underline;
+}
+
+.issueDetails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.issueLabels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.issueLabel {
+  padding: 3px 7px;
+  border: 1px solid rgba(242, 222, 139, 0.3);
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.68rem;
+  line-height: 1.2;
+}
+
+.issueComments {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.issueEmpty {
+  margin: 0;
+  padding: 24px;
+}
+
+@media (max-width: 640px) {
+  .issueItem {
+    display: block;
+    padding: 16px;
+  }
+
+  .issueComments {
+    display: block;
+    margin-top: 10px;
+  }
+}

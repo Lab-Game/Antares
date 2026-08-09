@@ -1,4 +1,5 @@
 import Image from "next/image";
+import styles from "./page.module.css";
 
 export default function HomePage() {
   return (
@@ -9,9 +10,9 @@ export default function HomePage() {
         View, California.
       </p>
 
-      <div className="photo-frame">
+      <div className={styles.photoFrame}>
         <Image
-          className="photo"
+          className={styles.photo}
           src="/team-photos/team-2026.webp"
           alt="Antares team photo"
           fill
@@ -20,7 +21,7 @@ export default function HomePage() {
         />
       </div>
 
-      <p style={{ textAlign: "center", marginTop: "1rem", fontSize: "0.9rem" }}>
+      <p className={styles.contact}>
         <a href="mailto:contact@team6962.com">contact@team6962.com</a><br />
         1200 Villa Street<br />
         Mountain View, CA 94041

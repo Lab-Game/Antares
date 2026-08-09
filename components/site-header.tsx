@@ -5,16 +5,17 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 import { siteNavigation } from "@/lib/site-navigation";
+import styles from "./site-header.module.css";
 
 export function SiteHeader() {
   const pathname = usePathname();
 
   return (
-    <header className="site-header">
-      <div className="site-header__inner">
-        <Link className="brand" href="/">
+    <header className={styles.header}>
+      <div className={styles.inner}>
+        <Link className={styles.brand} href="/">
           <Image
-            className="brand__logo"
+            className={styles.logo}
             src="/brand/transparent-icon.png"
             alt="Antares"
             width={164}
@@ -24,11 +25,11 @@ export function SiteHeader() {
           />
         </Link>
 
-        <nav className="desktop-nav" aria-label="Primary">
+        <nav className={styles.desktopNav} aria-label="Primary">
           {siteNavigation.map((item) => (
             <Link
               key={item.href}
-              className={`desktop-nav__link${pathname === item.href ? " is-active" : ""}`}
+              className={`${styles.desktopLink}${pathname === item.href ? ` ${styles.active}` : ""}`}
               href={item.href}
             >
               {item.label}
@@ -36,13 +37,13 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <details className="mobile-nav">
-          <summary className="mobile-nav__toggle">Menu</summary>
-          <nav className="mobile-nav__panel" aria-label="Primary mobile">
+        <details className={styles.mobileNav}>
+          <summary className={styles.mobileToggle}>Menu</summary>
+          <nav className={styles.mobilePanel} aria-label="Primary mobile">
             {siteNavigation.map((item) => (
               <Link
                 key={item.href}
-                className={`mobile-nav__link${pathname === item.href ? " is-active" : ""}`}
+                className={`${styles.mobileLink}${pathname === item.href ? ` ${styles.active}` : ""}`}
                 href={item.href}
               >
                 {item.label}

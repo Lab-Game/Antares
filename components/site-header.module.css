@@ -1,0 +1,140 @@
+.header {
+  --star-glow: 0 0 0 1px rgba(242, 222, 139, 0.55), 0 0 16px 2px rgba(242, 222, 139, 0.45),
+    0 0 32px 6px rgba(242, 222, 139, 0.2);
+  --star-text-glow: 0 0 10px rgba(242, 222, 139, 0.72), 0 0 22px rgba(242, 222, 139, 0.35);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--brand-dark-blue);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.inner {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 16px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 8px;
+  gap: 20px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+}
+
+.logo {
+  width: auto;
+  height: 75px;
+}
+
+.desktopNav {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.desktopLink,
+.mobileLink,
+.mobileToggle {
+  transition: color 160ms ease, text-shadow 200ms ease, box-shadow 200ms ease,
+    background-color 160ms ease, border-color 160ms ease;
+}
+
+.desktopLink {
+  padding: 10px 14px;
+  color: var(--muted);
+  font-family: var(--font-display), "Franklin Gothic Medium", sans-serif;
+  font-size: 2rem;
+}
+
+.desktopLink:hover,
+.desktopLink:focus-visible,
+.desktopLink.active,
+.mobileLink:hover,
+.mobileLink:focus-visible,
+.mobileLink.active {
+  color: var(--accent);
+  text-shadow: var(--star-text-glow);
+}
+
+.desktopLink:focus-visible,
+.mobileLink:focus-visible {
+  outline: 1px dotted var(--accent);
+  outline-offset: 4px;
+}
+
+.mobileNav {
+  display: none;
+  position: relative;
+}
+
+.mobileToggle {
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-panel-strong);
+  color: var(--text);
+  font-family: var(--font-display), "Franklin Gothic Medium", sans-serif;
+  cursor: pointer;
+  list-style: none;
+}
+
+.mobileToggle::-webkit-details-marker {
+  display: none;
+}
+
+.mobileToggle:hover,
+.mobileToggle:focus-visible {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  box-shadow: var(--star-glow);
+  outline: none;
+}
+
+.mobilePanel {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 12px);
+  display: grid;
+  min-width: 220px;
+  padding: 10px;
+  gap: 8px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--brand-dark-blue);
+  box-shadow: var(--shadow);
+}
+
+.mobileLink {
+  padding: 12px 14px;
+  color: var(--text);
+  font-family: var(--font-display), "Franklin Gothic Medium", sans-serif;
+  font-size: 2rem;
+}
+
+@media (max-width: 860px) {
+  .desktopNav {
+    display: none;
+  }
+
+  .mobileNav {
+    display: block;
+  }
+}
+
+@media (max-width: 640px) {
+  .inner {
+    width: min(100% - 20px, 1120px);
+    padding: 12px 0;
+  }
+
+  .logo {
+    height: 68px;
+  }
+}

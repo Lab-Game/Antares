@@ -1,0 +1,18 @@
+.photoFrame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 0 0 1em;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.photo {
+  object-fit: cover;
+}
+
+.contact {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}

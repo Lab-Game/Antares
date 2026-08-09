@@ -1,4 +1,5 @@
 import Image from "next/image";
+import styles from "./video-card.module.css";
 
 type VideoCardProps = {
   title: string;
@@ -9,13 +10,13 @@ type VideoCardProps = {
 // Compact left-text / right-thumbnail row for one training video.
 export function VideoCard({ title, description, youtubeId }: VideoCardProps) {
   return (
-    <div className="video-card">
-      <div className="video-card__info">
+    <div className={styles.card}>
+      <div className={styles.info}>
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
       <a
-        className="video-card__thumb"
+        className={styles.thumbnail}
         href={`https://www.youtube.com/watch?v=${youtubeId}`}
         target="_blank"
         rel="noopener noreferrer"

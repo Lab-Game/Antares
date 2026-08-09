@@ -1,4 +1,5 @@
 import Image from "next/image";
+import styles from "./season-card.module.css";
 
 type SeasonLink = {
   label: string;
@@ -21,23 +22,23 @@ export function SeasonCard({ year, name, image, blogPosts, links }: SeasonCardPr
   const hasContent = image || (blogPosts && blogPosts.length > 0) || (links && links.length > 0);
 
   return (
-    <div className="season-card">
-      <h2 className="season-card__title">
-        <span className="season-card__year">{year}</span> {name}
+    <div className={styles.card}>
+      <h2 className={styles.title}>
+        <span className={styles.year}>{year}</span> {name}
       </h2>
 
-      <div className="season-card__body">
+      <div className={styles.body}>
         {image && (
-          <div className="season-card__image">
+          <div className={styles.image}>
             <Image src={image.src} alt={image.alt} fill sizes="(min-width: 760px) 360px, 100vw" />
           </div>
         )}
 
         {(blogPosts && blogPosts.length > 0) || (links && links.length > 0) ? (
-          <div className="season-card__columns">
+          <div className={styles.columns}>
             {blogPosts && blogPosts.length > 0 && (
               <div>
-                <ul className="season-card__links">
+                <ul className={styles.links}>
                   {blogPosts.map((post) => (
                     <li key={post.href}>
                       <a href={post.href} target="_blank" rel="noopener noreferrer">
@@ -51,8 +52,8 @@ export function SeasonCard({ year, name, image, blogPosts, links }: SeasonCardPr
 
             {links && links.length > 0 && (
               <div>
-                <h3 className="season-card__section-title">Links</h3>
-                <ul className="season-card__links">
+                <h3 className={styles.sectionTitle}>Links</h3>
+                <ul className={styles.links}>
                   {links.map((link) => (
                     <li key={link.href}>
                       <a href={link.href} target="_blank" rel="noopener noreferrer">
@@ -67,7 +68,7 @@ export function SeasonCard({ year, name, image, blogPosts, links }: SeasonCardPr
         ) : null}
       </div>
 
-      {!hasContent && <p className="season-card__empty">Details coming soon.</p>}
+      {!hasContent && <p className={styles.empty}>Details coming soon.</p>}
     </div>
   );
 }
