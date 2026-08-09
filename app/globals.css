@@ -4,7 +4,7 @@
   --brand-light-blue: #39456A;
   --brand-dark-blue: #1D2335;
   --bg: var(--brand-blue);
-  --bg-panel-strong: rgba(28, 34, 53, 0.88);
+  --bg-panel-strong: #1c2235;
   --text: #f5f7ff;
   --muted: rgba(245, 247, 255, 0.75);
   --accent: var(--brand-yellow);
@@ -14,6 +14,7 @@
   /* Starlight glow used to highlight clickable nav items on hover/focus. */
   --star-glow: 0 0 0 1px rgba(242, 222, 139, 0.55), 0 0 16px 2px rgba(242, 222, 139, 0.45),
     0 0 32px 6px rgba(242, 222, 139, 0.2);
+  --star-text-glow: 0 0 10px rgba(242, 222, 139, 0.72), 0 0 22px rgba(242, 222, 139, 0.35);
   /* Height of the sticky .site-header, kept in sync with it so anchor jumps clear the nav bar. */
   --header-height: 125px;
 }
@@ -91,8 +92,7 @@ ul {
   position: sticky;
   top: 0;
   z-index: 20;
-  backdrop-filter: blur(20px);
-  background: rgba(21, 26, 39, 0.72);
+  background: var(--brand-dark-blue);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -129,14 +129,12 @@ ul {
 .desktop-nav__link,
 .mobile-nav__link,
 .mobile-nav__toggle {
-  transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease,
-    color 160ms ease, box-shadow 200ms ease;
+  transition: color 160ms ease, text-shadow 200ms ease, box-shadow 200ms ease,
+    background-color 160ms ease, border-color 160ms ease;
 }
 
 .desktop-nav__link {
   padding: 10px 14px;
-  border-radius: 999px;
-  border: 1px solid transparent;
   color: var(--muted);
   font-family: var(--font-display), "Franklin Gothic Medium", sans-serif;
   font-size: 2rem;
@@ -147,13 +145,21 @@ ul {
 .desktop-nav__link.is-active,
 .mobile-nav__link:hover,
 .mobile-nav__link:focus-visible,
-.mobile-nav__link.is-active,
+.mobile-nav__link.is-active {
+  color: var(--accent);
+  text-shadow: var(--star-text-glow);
+}
+
+.desktop-nav__link:focus-visible,
+.mobile-nav__link:focus-visible {
+  outline: 1px dotted var(--accent);
+  outline-offset: 4px;
+}
+
 .mobile-nav__toggle:hover,
 .mobile-nav__toggle:focus-visible {
   background: var(--accent-soft);
   border-color: var(--accent);
-  color: var(--text);
-  transform: translateY(-1px);
   box-shadow: var(--star-glow);
   outline: none;
 }
@@ -190,15 +196,13 @@ ul {
   padding: 10px;
   gap: 8px;
   border-radius: 20px;
-  background: rgba(21, 26, 39, 0.98);
+  background: var(--brand-dark-blue);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
 }
 
 .mobile-nav__link {
   padding: 12px 14px;
-  border-radius: 14px;
-  border: 1px solid transparent;
   color: var(--text);
   font-family: var(--font-display), "Franklin Gothic Medium", sans-serif;
   font-size: 2rem;
