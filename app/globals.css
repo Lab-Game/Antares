@@ -1,8 +1,10 @@
 :root {
+  /*  These are standard Antares brand colors.  */
   --brand-blue: #252E45;
   --brand-yellow: #F2DE8B;
   --brand-light-blue: #39456A;
   --brand-dark-blue: #1D2335;
+  
   --bg: var(--brand-blue);
   --bg-panel-strong: #1c2235;
   --text: #f5f7ff;
