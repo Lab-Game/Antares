@@ -4,58 +4,6 @@ export default function TrainingPage() {
   return (
     <main className="site-page">
 
-      <h2 id="mechanical">Mechanical</h2>
-      <VideoCard
-        title="Introduction to Mechanics"
-        description={`Classical mechanics is at the heart of FRC, where forces move masses to score and win matches.  And,
-      when misapplied, those same forces can tip, flip, and break robots.  Here, we'll preview concepts covered
-      in this video series (motion, force, work, mass) and some useful relationships between them.`}
-        youtubeId="dQw4w9WgXcQ"
-      />
-      <VideoCard
-        title="Motion"
-        description={`Motion can be immensely complex.  We'll focus on two particularly useful special cases, linear and rotational motion.
-      In each case, we'll look at ways to describe position, veloccity, and acceleration and discuss how these three
-      characteristics of motion are related.`}
-        youtubeId="dQw4w9WgXcQ"
-      />
-      <VideoCard
-        title="Force"
-        description={`Intuitively, a force is a push, pull or twist.  We'll see how to quantify both linear and rotational forces in
-      terms of Newtons and Newton-meters.`}
-        youtubeId="dQw4w9WgXcQ"
-      />
-      <VideoCard
-        title="Friction"
-        description={`Here, we'll zoom in on friction, a force that resists motion between contacting surfaces.  Friction comes up everywhere
-      in FRC, both wreaking havoc and holding robots together.`}
-        youtubeId="dQw4w9WgXcQ"
-      />
-      <VideoCard
-        title="Work, Energy, and Power"
-        description={`Work measures the energy needed to move a force over a distance.  Many FRC mechanisms recast work, trading off force
-      and distance, to create motion with the right balance of speed and strength.  We'll also look at power, which measures
-      how fast work is done.  Power will later emerge as a bridge between the mechanical and electrical worlds, two essential
-      aspects of FRC robotics.`}
-        youtubeId="dQw4w9WgXcQ"
-      />
-      <VideoCard
-        title="Mass"
-        description={`Mass measures the amount of matter in an object.  We'll look at how mass is quantified and how it relates to weight.
-      Then we'll consider two quantities that summarize the distribution of mass in an object:  center-of-mass and moment of inertia.
-      Center of mass says a lot about robot stability, while moment of inertia describes how much effort is required to get
-      an object (like a shooter or intake roller) spinning.`}
-        youtubeId="dQw4w9WgXcQ"
-      />
-      <VideoCard
-        title="Newton's Second Law"
-        description={`The speed of robots and mechanisms are critical to competitive success FRC.  Newton's Second Law quantifies the 
-      relationship between force, mass, and acceleration, allow us to reason about how fast robots and mechanisms can move.`}
-        youtubeId="dQw4w9WgXcQ"
-      />
-
-      <hr />
-
       <h2 id="electrical">Electrical</h2>
       <VideoCard
         title="Introduction to Electricity"
@@ -137,6 +85,59 @@ export default function TrainingPage() {
       causing a buildup of "static" or non-moving charge.  This can produce thousands of volts and trigger a sudden flow of
       current called an electrostatic discharge (ESD).  Beyond a painful shock, ESD can cause peculiar and permanent damage
       to electrical devices.`}
+        youtubeId="dQw4w9WgXcQ"
+      />
+
+      <hr />
+
+
+      <h2 id="mechanical">Mechanical</h2>
+      <VideoCard
+        title="Introduction to Mechanics"
+        description={`Classical mechanics is at the heart of FRC, where forces move masses to score and win matches.  And,
+      when misapplied, those same forces can tip, flip, and break robots.  Here, we'll preview concepts covered
+      in this video series (motion, force, work, mass) and some useful relationships between them.`}
+        youtubeId="dQw4w9WgXcQ"
+      />
+      <VideoCard
+        title="Motion"
+        description={`Motion can be immensely complex.  We'll focus on two particularly useful special cases, linear and rotational motion.
+      In each case, we'll look at ways to describe position, veloccity, and acceleration and discuss how these three
+      characteristics of motion are related.`}
+        youtubeId="dQw4w9WgXcQ"
+      />
+      <VideoCard
+        title="Force"
+        description={`Intuitively, a force is a push, pull or twist.  We'll see how to quantify both linear and rotational forces in
+      terms of Newtons and Newton-meters.`}
+        youtubeId="dQw4w9WgXcQ"
+      />
+      <VideoCard
+        title="Friction"
+        description={`Here, we'll zoom in on friction, a force that resists motion between contacting surfaces.  Friction comes up everywhere
+      in FRC, both wreaking havoc and holding robots together.`}
+        youtubeId="dQw4w9WgXcQ"
+      />
+      <VideoCard
+        title="Work, Energy, and Power"
+        description={`Work measures the energy needed to move a force over a distance.  Many FRC mechanisms recast work, trading off force
+      and distance, to create motion with the right balance of speed and strength.  We'll also look at power, which measures
+      how fast work is done.  Power will later emerge as a bridge between the mechanical and electrical worlds, two essential
+      aspects of FRC robotics.`}
+        youtubeId="dQw4w9WgXcQ"
+      />
+      <VideoCard
+        title="Mass"
+        description={`Mass measures the amount of matter in an object.  We'll look at how mass is quantified and how it relates to weight.
+      Then we'll consider two quantities that summarize the distribution of mass in an object:  center-of-mass and moment of inertia.
+      Center of mass says a lot about robot stability, while moment of inertia describes how much effort is required to get
+      an object (like a shooter or intake roller) spinning.`}
+        youtubeId="dQw4w9WgXcQ"
+      />
+      <VideoCard
+        title="Newton's Second Law"
+        description={`The speed of robots and mechanisms are critical to competitive success FRC.  Newton's Second Law quantifies the 
+      relationship between force, mass, and acceleration, allow us to reason about how fast robots and mechanisms can move.`}
         youtubeId="dQw4w9WgXcQ"
       />
 

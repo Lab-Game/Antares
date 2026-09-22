@@ -20,8 +20,6 @@ export function SiteHeader() {
             alt="Antares"
             width={164}
             height={211}
-            unoptimized
-            priority
           />
         </Link>
 

@@ -5,7 +5,7 @@ export default function DonatePage() {
 
       <p>Please email <a href="mailto:donate@team6962.com">donate@team6962.com</a> and 
         {' '}<a href="mailto:donate@khanlabschool.org">donate@khanlabschool.org</a> with
-        the donor's name, gift amount (plus any expected employer matching), and method
+        the donor&apos;s name, gift amount (plus any expected employer matching), and method
         of gift so we can properly account for and allocate gifts.</p>
 
       <p>Ways to donate are listed below.  All your donations to Antares via

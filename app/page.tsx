@@ -16,7 +16,7 @@ export default function HomePage() {
           src="/team-photos/team-2026.webp"
           alt="Antares team photo"
           fill
-          priority
+          preload
           sizes="(min-width: 760px) 760px, 100vw"
         />
       </div>
