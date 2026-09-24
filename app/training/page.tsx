@@ -11,20 +11,20 @@ export default function TrainingPage() {
       and shine cool LEDS.
       This introduction previews the topics we'll cover in this video series, including basic concepts (charge, current, voltage,
       power, and resistance), a couple equations (Ohm's Law and the power equation), and some special topics (safety, CAN, and ESD).`}
-        youtubeId="fCIQAOy_BYk"
+        youtubeId="dQw4w9WgXcQ"
       />
       <VideoCard
         title="Electric Charge"
         description={`Electricity refers to a collection of phenomena associated with electric charge.  We'll look at charge at the atomic level,
       talk about quantification of charge, and discuss how charged particles interact.`}
-        youtubeId="Ppw35NSNnQA"
+        youtubeId="dQw4w9WgXcQ"
       />
       <VideoCard
         title="Electric Current"
         description={`FRC robots are powered by movement of electric charge, or current.  We'll look at how current is quantified, how batteries
       produce current, and places where an understanding of current is paricularly important in FRC.  This includes the battery,
       main breaker, circuit breakers, and motor torque.`}
-        youtubeId="YUkq5lYs9Ig"
+        youtubeId="dQw4w9WgXcQ"
       />
       <VideoCard
         title="Voltage"
