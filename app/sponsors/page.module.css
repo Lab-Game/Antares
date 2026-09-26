@@ -1,8 +1,105 @@
 .logo {
   display: block;
   height: auto;
-  max-width: 80%;
+  width: auto;
   margin: 2rem;
   padding: 2rem;
   background-color: white;
+  height: 128px;
+}
+
+.header {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 64px 0;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-image: url('/team-photos/antares-stands.jpg');
+  background-size: cover;
+  background-position: 50% 60%;
+
+  filter: blur(1px) opacity(0.3) brightness(0.8);
+
+  z-index: -1;
+}
+
+.headerInner {
+  width: var(--main-width);
+  margin: 0 auto;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.body {
+  background-color: #fff;
+  overflow: hidden;
+  text-align: center;
+  padding-top: 32px;
+}
+
+.sponsorSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.embeddedSponsors {
+  background-color: #fff;
+  overflow: hidden;
+  text-align: center;
+  padding-top: 32px;
+  padding-bottom: 64px;
+}
+
+.embeddedSponsorLogo {
+  display: block;
+  height: auto;
+  width: auto;
+  margin: 16px;
+  padding: 16px;
+  background-color: white;
+  height: 80px;
+}
+
+.textSponsor {
+  margin: 2rem;
+  padding: 2rem;
+  background-color: white;
+}
+
+.embeddedSponsorsInfo {
+  padding: 16px;
+  background-color: white;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.embeddedSponsors .sponsorSection {
+  margin-bottom: 24px;
+}
+
+.moreSponsorsButton {
+  background: var(--brand-blue);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 12px;
+}
+
+.moreSponsorsButton:hover {
+  background-color: var(--brand-light-blue);
 }

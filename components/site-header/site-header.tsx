@@ -21,6 +21,7 @@ export function SiteHeader() {
             width={164}
             height={211}
           />
+          <span className={styles.brandText}>Antares</span>
         </Link>
 
         <nav className={styles.desktopNav} aria-label="Primary">

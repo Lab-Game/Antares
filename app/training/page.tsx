@@ -1,11 +1,97 @@
-import { VideoCard } from "@/app/training/video-card";
+import Link from "next/link";
 
 export default function TrainingPage() {
   return (
     <main className="site-page">
 
-      <h2 id="electrical">Electrical</h2>
+      <h1 className="page-title">Training Materials</h1>
+
+      <p>
+        This offseason, Antares is publishing its training materials for teaching
+        new students robotics skills, so that other teams can benefit from our
+        resources. Note that these resources are primarily designed for our own
+        team, so some of the content may be less applicable to other teams.
+      </p>
+
+      <h2 id="design">Design</h2>
+      <p>These classes are taught alongside asynchronous work on <Link href="https://frcdesign.org" target="_blank">FRCDesign.org</Link>.</p>
+      <ul>
+        <li><Link href="https://docs.google.com/presentation/d/1y6CVohvNlVMuyJYbqoWGRwai65YSwGhYqb1wFwluY-w/present" target="_blank">Spot It Activity & Decluttering</Link></li>
+        <li><Link href="https://docs.google.com/presentation/d/1BMZ41dnS_5UMpBF6OQEsHoPmNlZ0NUGqabzFeW-GXr4/present" target="_blank">COTS Parts & FRCDesign.org</Link></li>
+        <li><Link href="https://docs.google.com/presentation/d/16MaBvhZREUiw3Qs5XcEiccIjIAZkScC28zNIPyIwjVs/present" target="_blank">Rigidity</Link></li>
+      </ul>
+
+      <hr />
+
+      <h2 id="build">Build</h2>
+      <ul>
+        <li><Link href="https://docs.google.com/presentation/d/1POnJrlT_g4C0MVwWhFxP8AF2Q9TZvM2Sjyb5PpVmaWI/present" target="_blank">Fasteners</Link></li>
+        <li><Link href="https://docs.google.com/presentation/d/1Hyami-yqCSAG2CkHcU7fwzItvZRnwQgRYa1GPpVV_7Q/present" target="_blank">Measuring and Cutting Pt. 1</Link></li>
+        <li><Link href="https://docs.google.com/presentation/d/182Aif_00ry8ug8o35t0KR2eTBJLRVltnG9Ha6ynkM4g/present" target="_blank">Measuring and Cutting Pt. 2</Link></li>
+        <li><Link href="https://docs.google.com/presentation/d/1EVYVoFDf3Iqhb0v_Q-5tDpwHj3n2xXau_FlqAvpKuxo/present" target="_blank">Measuring and Cutting Final Project</Link></li>
+      </ul>
+      {/* <VideoCard
+        title="Introduction to Mechanics"
+        description={`Classical mechanics is at the heart of FRC, where forces move masses to score and win matches.  And,
+      when misapplied, those same forces can tip, flip, and break robots.  Here, we'll preview concepts covered
+      in this video series (motion, force, work, mass) and some useful relationships between them.`}
+        youtubeId="dQw4w9WgXcQ"
+      />
       <VideoCard
+        title="Motion"
+        description={`Motion can be immensely complex.  We'll focus on two particularly useful special cases, linear and rotational motion.
+      In each case, we'll look at ways to describe position, veloccity, and acceleration and discuss how these three
+      characteristics of motion are related.`}
+        youtubeId="dQw4w9WgXcQ"
+      />
+      <VideoCard
+        title="Force"
+        description={`Intuitively, a force is a push, pull or twist.  We'll see how to quantify both linear and rotational forces in
+      terms of Newtons and Newton-meters.`}
+        youtubeId="dQw4w9WgXcQ"
+      />
+      <VideoCard
+        title="Friction"
+        description={`Here, we'll zoom in on friction, a force that resists motion between contacting surfaces.  Friction comes up everywhere
+      in FRC, both wreaking havoc and holding robots together.`}
+        youtubeId="dQw4w9WgXcQ"
+      />
+      <VideoCard
+        title="Work, Energy, and Power"
+        description={`Work measures the energy needed to move a force over a distance.  Many FRC mechanisms recast work, trading off force
+      and distance, to create motion with the right balance of speed and strength.  We'll also look at power, which measures
+      how fast work is done.  Power will later emerge as a bridge between the mechanical and electrical worlds, two essential
+      aspects of FRC robotics.`}
+        youtubeId="dQw4w9WgXcQ"
+      />
+      <VideoCard
+        title="Mass"
+        description={`Mass measures the amount of matter in an object.  We'll look at how mass is quantified and how it relates to weight.
+      Then we'll consider two quantities that summarize the distribution of mass in an object:  center-of-mass and moment of inertia.
+      Center of mass says a lot about robot stability, while moment of inertia describes how much effort is required to get
+      an object (like a shooter or intake roller) spinning.`}
+        youtubeId="dQw4w9WgXcQ"
+      />
+      <VideoCard
+        title="Newton's Second Law"
+        description={`The speed of robots and mechanisms are critical to competitive success FRC.  Newton's Second Law quantifies the 
+      relationship between force, mass, and acceleration, allow us to reason about how fast robots and mechanisms can move.`}
+        youtubeId="dQw4w9WgXcQ"
+      /> */}
+
+      <hr />
+
+      <h2 id="electrical">Electrical</h2>
+
+      <p>
+        We&apos;re working on a series of videos that teach electrical theory
+        and our wiring practices. These are still in progress and will be available
+        soon!
+      </p>
+
+      {/* <h3 id="electrical-theory">Electrical Theory</h3>
+      <p>Coming soon!</p> */}
+      {/* <VideoCard
         title="Introduction to Electricity"
         description={`We'll look at the many ways electricity is used on FRC robot:  to power motors, send information, enable computation,
       and shine cool LEDS.
@@ -86,65 +172,11 @@ export default function TrainingPage() {
       current called an electrostatic discharge (ESD).  Beyond a painful shock, ESD can cause peculiar and permanent damage
       to electrical devices.`}
         youtubeId="dQw4w9WgXcQ"
-      />
+      /> */}
 
-      <hr />
-
-
-      <h2 id="mechanical">Mechanical</h2>
-      <VideoCard
-        title="Introduction to Mechanics"
-        description={`Classical mechanics is at the heart of FRC, where forces move masses to score and win matches.  And,
-      when misapplied, those same forces can tip, flip, and break robots.  Here, we'll preview concepts covered
-      in this video series (motion, force, work, mass) and some useful relationships between them.`}
-        youtubeId="dQw4w9WgXcQ"
-      />
-      <VideoCard
-        title="Motion"
-        description={`Motion can be immensely complex.  We'll focus on two particularly useful special cases, linear and rotational motion.
-      In each case, we'll look at ways to describe position, veloccity, and acceleration and discuss how these three
-      characteristics of motion are related.`}
-        youtubeId="dQw4w9WgXcQ"
-      />
-      <VideoCard
-        title="Force"
-        description={`Intuitively, a force is a push, pull or twist.  We'll see how to quantify both linear and rotational forces in
-      terms of Newtons and Newton-meters.`}
-        youtubeId="dQw4w9WgXcQ"
-      />
-      <VideoCard
-        title="Friction"
-        description={`Here, we'll zoom in on friction, a force that resists motion between contacting surfaces.  Friction comes up everywhere
-      in FRC, both wreaking havoc and holding robots together.`}
-        youtubeId="dQw4w9WgXcQ"
-      />
-      <VideoCard
-        title="Work, Energy, and Power"
-        description={`Work measures the energy needed to move a force over a distance.  Many FRC mechanisms recast work, trading off force
-      and distance, to create motion with the right balance of speed and strength.  We'll also look at power, which measures
-      how fast work is done.  Power will later emerge as a bridge between the mechanical and electrical worlds, two essential
-      aspects of FRC robotics.`}
-        youtubeId="dQw4w9WgXcQ"
-      />
-      <VideoCard
-        title="Mass"
-        description={`Mass measures the amount of matter in an object.  We'll look at how mass is quantified and how it relates to weight.
-      Then we'll consider two quantities that summarize the distribution of mass in an object:  center-of-mass and moment of inertia.
-      Center of mass says a lot about robot stability, while moment of inertia describes how much effort is required to get
-      an object (like a shooter or intake roller) spinning.`}
-        youtubeId="dQw4w9WgXcQ"
-      />
-      <VideoCard
-        title="Newton's Second Law"
-        description={`The speed of robots and mechanisms are critical to competitive success FRC.  Newton's Second Law quantifies the 
-      relationship between force, mass, and acceleration, allow us to reason about how fast robots and mechanisms can move.`}
-        youtubeId="dQw4w9WgXcQ"
-      />
-
-      <hr />
-
-      <h2 id="wiring">Wiring</h2>
-      <VideoCard
+      {/* <h3 id="wiring">Wiring</h3>
+      <p>Coming soon!</p> */}
+      {/* <VideoCard
         title="Introduction to Wiring"
         description={`We'll frame the problem of wiring an FRC robot.  The goal is to secure a few hundred wires, connections,
       and devices in a cramped space full of moving parts to enable both efficient power transfer and data
@@ -191,16 +223,30 @@ export default function TrainingPage() {
         title="Debugging CAN"
         description={`CAN problems are common and annoying.  We'll go over some quick tricks to identify and correct issues.`}
         youtubeId="dQw4w9WgXcQ"
-      />
+      /> */}
 
       <hr />
 
-      <h2 id="motors">Motors</h2>
+      <h2 id="code">Code</h2>
 
-      <hr />
+      <h3>Java</h3>
+      <p>These Java training resources cover the basics of programming in
+        Java, including variables, operators, conditionals, loops, arrays,
+        lists, methods, objects, and classes. These resources are loosely
+        based on those created by <a href="https://www.citruscircuits.org/" target="_blank">
+          Citrus Circuits</a>.</p>
+      <ul>
+        <li><Link href="https://docs.google.com/presentation/d/1k_kf-9iOFxXmpLMMt5FWCv0w4sOJPbmh_tx3w3tJiSE/present" target="_blank">Variables & Operators</Link></li>
+        <li><Link href="https://docs.google.com/presentation/d/1tS_HS4XsYDFjdvDCLsgwLn6Q3XfEqpDqjpIBUwJOh_E/present" target="_blank">Conditionals</Link></li>
+        <li><Link href="https://docs.google.com/presentation/d/1-gksGsewoghzCd6oX76BOtsPFx8VDclPKlZOj44-YsU/present" target="_blank">Loops, Arrays, & Lists</Link></li>
+        <li><Link href="https://docs.google.com/presentation/d/1Rjr5_SOxQgW0otM5Cf1-mZwO8Jj2oNLfIt7PqAmhkWk/present" target="_blank">Methods, Objects, & Classes</Link></li>
+      </ul>
 
-      <h2 id="simulation">Simulation</h2>
-      <VideoCard
+      {/* <h3>Control</h3>
+      <p>Control training resources are coming soon!</p>
+      <h3 id="simulation">Simulation</h3>
+      <p>Simulation training resources are coming soon!</p> */}
+      {/* <VideoCard
         title="Introduction to Simulation"
         description={`This video series explains how to build a mathematical model of a robot subsystem.  A simulation can be
       useful when weighing design tradeoffs and for offline testing of control algorithms.  And constructing a
@@ -213,23 +259,53 @@ export default function TrainingPage() {
         description={`We'll first model a brushed DC motor, by far the most common type in FRC.  This model will be a
       common component across all subsystem models.`}
         youtubeId="dQw4w9WgXcQ"
-      />
-
-      <hr />
-
-      <h2 id="code">Code</h2>
-
-      <hr />
-
-      <h2 id="control">Control</h2>
+      /> */}
 
       <hr />
 
       <h2 id="fabrication">Fabrication</h2>
 
+      <p>Fabrication resources cover CAM in Fusion 360 and general usage of a Shopbot
+        CNC router. These lessons often involve hands-on excercises which are
+        not included in the online resources.</p>
+
+      <ul>
+        <li><Link href="https://docs.google.com/presentation/d/1PTUouE3uY7gL6juVZ7fuQgodHCkVo1fzSGe26BV0Mbk/present" target="_blank">Intro to Fabrication</Link></li>
+        <li><Link href="https://docs.google.com/presentation/d/1ue6U0qbWVBqzKY1o0BB2pzGrZDZE4gxdaau7invctW4/present" target="_blank">Installing Fusion</Link></li>
+        <li><Link href="https://docs.google.com/presentation/d/1SsCAWcG5TfK9-5QJUr9jv7Nmcc3F7RmGav8rjp6blwI/present" target="_blank">Onshape Overview & Fusion Pt. 1</Link></li>
+        <li><Link href="https://docs.google.com/presentation/d/1_TH4P5I2mXiwZZHhGjOlc9JmJbyk1ZJ4uWAinppQRGU/present" target="_blank">Fusion Pt. 2</Link></li>
+      </ul>
+
       <hr />
 
-      <h2 id="leadership">Leadership</h2>
+      <h2 id="marketing">Marketing</h2>
+
+      <ul>
+        <li><Link href="https://docs.google.com/presentation/d/1vaP-F9ibG8zuEGFyZ-phrIQ8FqE_gEM6v3DzffxSWgw/present" target="_blank">Social Media</Link></li>
+        <li><Link href="https://docs.google.com/presentation/d/1KB7zZA4sXRMLlEUUILjxqqnVhNnyNn5iYPl4aA4fb2Q/present" target="_blank">Merchandise</Link></li>
+      </ul>
+
+      <hr />
+
+      <h2 id="business">Business</h2>
+
+      <ul>
+        <li><Link href="https://docs.google.com/presentation/d/10XjlFP_QH2YX7bLPTbLg9Yz7iIp3s0cWFQWtfFquLbc/present" target="_blank">Sponsorships</Link></li>
+      </ul>
+
+      <hr />
+
+      <h2 id="outreach">Outreach</h2>
+
+      <ul>
+        <li><Link href="https://docs.google.com/presentation/d/14g1uzaReIegExKEqmGUNELmhmNxnPuIAIrwwK7TOZyw/present" target="_blank">Planning Outreach Events</Link></li>
+      </ul>
+
+      <hr />
+
+      {/* <h2 id="leadership">Leadership</h2>
+
+      <p>Leadership training resources are coming soon!</p> */}
 
     </main>
   );

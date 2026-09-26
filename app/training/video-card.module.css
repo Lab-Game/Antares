@@ -6,7 +6,7 @@
   padding: 16px;
   border: 1px solid var(--border);
   border-radius: 16px;
-  background: var(--bg-panel-strong);
+  background: var(--background);
 }
 
 .info {

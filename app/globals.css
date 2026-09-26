@@ -4,21 +4,20 @@
   --brand-yellow: #F2DE8B;
   --brand-light-blue: #39456A;
   --brand-dark-blue: #1D2335;
+  --brand-white: #ededed;
   
-  --bg: var(--brand-blue);
-  --bg-panel-strong: #1c2235;
-  --text: #f5f7ff;
-  --muted: rgba(245, 247, 255, 0.75);
+  --background: var(--brand-white);
+  --text: var(--brand-dark-blue);
   --accent: var(--brand-yellow);
   --accent-soft: rgba(242, 222, 139, 0.18);
   --border: rgba(242, 222, 139, 0.2);
   --shadow: 0 30px 80px rgba(7, 10, 18, 0.35);
   /* Height of the sticky site header, kept in sync so anchor jumps clear it. */
-  --header-height: 125px;
+  --main-width: min(760px, calc(100% - 32px));
 }
 
 html {
-  scroll-padding-top: calc(var(--header-height) + 16px);
+  scroll-padding-top: calc(69px);
   color-scheme: dark;
 }
 
@@ -29,9 +28,9 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background: var(--bg);
+  background: var(--background);
   color: var(--text);
-  font-family: "Arial", sans-serif;
+  font-family: var(--font-body), "Arial", sans-serif;
   /* Base copy size: p, ul, and buttons inherit this since they don't set their own. */
   font-size: 1.125rem;
 }
@@ -39,10 +38,6 @@ body {
 a {
   color: inherit;
   text-decoration: underline;
-}
-
-a:hover {
-  color: var(--accent);
 }
 
 ::selection {
@@ -61,8 +56,7 @@ h3 {
 }
 
 h1 {
-  max-width: 14ch;
-  font-size: clamp(2.75rem, 7vw, 5rem);
+  font-size: 2.5rem;
 }
 
 h2 {
@@ -70,36 +64,38 @@ h2 {
   font-size: 1.6rem;
 }
 
+h3 {
+  margin-top: 1.2em;
+  font-size: 1.2rem;
+}
+
 p {
   margin: 0 0 1em;
-  color: var(--muted);
+  color: var(--text);
   line-height: 1.7;
 }
 
 ul {
   margin: 0 0 1em;
   padding-left: 1.2em;
-  color: var(--muted);
+  color: var(--text);
   line-height: 1.8;
 }
 
 .site-page {
-  width: min(760px, calc(100% - 32px));
+  width: var(--main-width);
   margin: 0 auto;
   padding: 56px 0 88px;
 }
 
+.page-title {
+  font-size: 2.5rem;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
 @media (max-width: 640px) {
   :root {
-    --header-height: 93px;
+    --main-width: min(100% - 20px, 1120px);
   }
-
-  .site-page {
-    width: min(100% - 20px, 1120px);
-  }
-
-  h1 {
-    max-width: none;
-  }
-
 }

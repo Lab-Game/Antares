@@ -3,7 +3,7 @@ import { SeasonCard } from "@/app/history/season-card";
 export default function HistoryPage() {
   return (
     <main className="site-page">
-      <SeasonCard
+      {/* <SeasonCard
         year="2027"
         name="BioCore"
         image={{ src: "/robot-images/2027-preview.jpeg", alt: "2027 preview" }}
@@ -25,15 +25,29 @@ export default function HistoryPage() {
             href: "https://docs.google.com/document/d/1yF3X6UrQMm3FFEmn6YP3EattiMSmcEPaUboGkobUFTM/preview",
           },
         ]}
-      />
+      /> */}
       <SeasonCard
         year="2026"
-        name="Rebuilt"
+        name="REBUILT"
+        overview="Antares competed in the 2026 REBUILT season with
+        our robot Orion, which intakes balls from the ground and accurately
+        shoots them into a target. We participated in the Silicon Valley
+        and East Bay district events, winning the Imagery Award and
+        Autonomous Award and reaching far into the playoffs. At
+        the Northern California District Championship, the robot's intake
+        was mechanically unreliable, but we redesigned it for the offseason
+        and reached semifinals at Sunset Showdown."
         image={{ src: "/robot-images/2026-CAD.png", alt: "2026 CAD" }}
+        techBinder="/tech-binders/2026.pdf"
       />
       <SeasonCard
         year="2025"
-        name="Reefscape"
+        name="REEFSCAPE"
+        overview="Antares competed in the 2025 REEFSCAPE season with our
+        robots Aquarius, Cygnus, and Cassiopeia. These iterations resulted
+        in a final robot that intakes PVC pipes from the ground, quickly
+        scores them on poles, and can collect and shoot large balls into
+        the net."
         image={{ src: "/robot-images/2025-CAD.png", alt: "2025 CAD" }}
         blogPosts={[
           { label: "Week 1", href: "/blog-PDFs/2025Week1Blog.pdf" },
@@ -45,20 +59,29 @@ export default function HistoryPage() {
           { label: "Weeks 9 to 12", href: "/blog-PDFs/2025AntaresWeeks9to12Blog.pdf" },
           { label: "Capitol City Classic", href: "/blog-PDFs/2025CCCBlog.pdf" },
         ]}
+        // techBinder="/tech-binders/2025.pdf"
       />
       <SeasonCard
         year="2024"
-        name="Crescendo"
+        name="CRESCENDO"
+        overview="Antares' 2024 CRESCENDO robot, named Scorpius, efficiently
+        collected foam rings, shot them into a target, and placed them into the
+        &quot;amplifier.&quot; Scorpius competed at San Francisco Regional
+        and Monterey Bay Regional, where we reached finals. Antares earned
+        the Excellence in Engineering award at Monterey Bay Regional and
+        the Innovation in Control award at Sunset Showdown."
         image={{ src: "/robot-images/2024-CAD.png", alt: "2024 CAD" }}
         blogPosts={[
           { label: "Offseason", href: "/blog-PDFs/ANTARES_Offseason_blog.pdf" },
           { label: "Weeks 1 and 2", href: "/blog-PDFs/ANTARES_Week_1_2_blog.pdf" },
           { label: "Weeks 3 and 4", href: "/blog-PDFs/ANTARES-Week-3-4.pdf" },
         ]}
+        // techBinder="/tech-binders/2024.pdf"
       />
       <SeasonCard
         year="2023"
-        name="Charged Up"
+        name="CHARGED UP"
+        overview="Antares' 2023 CHARGED UP robot competed in the 2023 season, participating in various competitions and achieving notable milestones."
         image={{ src: "/robot-images/2023-photo.jpg", alt: "2023 Photo" }}
         blogPosts={[
           {
@@ -73,7 +96,8 @@ export default function HistoryPage() {
       />
       <SeasonCard
         year="2022"
-        name="Rapid React"
+        name="RAPID REACT"
+        overview="Antares' 2022 RAPID REACT robot competed in the 2022 season, participating in various competitions and achieving notable milestones."
         image={{ src: "/robot-images/2022-whiteboard.jpg", alt: "2022 Photo" }}
         blogPosts={[
           {

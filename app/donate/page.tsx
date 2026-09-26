@@ -1,9 +1,16 @@
+import styles from "./page.module.css";
+
 export default function DonatePage() {
-  return (
-    <main className="site-page">
+  return <main>
+    <div className={styles.header}>
+      <div className={styles.headerInner}>
+        <h1 className="page-title">Donations</h1>
+      </div>
+    </div>
+    <div className="site-page">
       <p>We appreciate donations to support our team!</p>
 
-      <p>Please email <a href="mailto:donate@team6962.com">donate@team6962.com</a> and 
+      <p>Please email <a href="mailto:donate@team6962.com">donate@team6962.com</a> and
         {' '}<a href="mailto:donate@khanlabschool.org">donate@khanlabschool.org</a> with
         the donor&apos;s name, gift amount (plus any expected employer matching), and method
         of gift so we can properly account for and allocate gifts.</p>
@@ -34,7 +41,7 @@ export default function DonatePage() {
         <li><b>Appreciated Stock</b>
           <ul>
             <li>Please contact <a href="mailto:donate@team6962.com">donate@team6962.com</a>
-                {" "}and <a href="mailto:donate@khanlabschool.org">donate@khanlabschool.org</a> for instructions</li>
+              {" "}and <a href="mailto:donate@khanlabschool.org">donate@khanlabschool.org</a> for instructions</li>
           </ul>
         </li>
         <li><b>In-Kind Donations</b>
@@ -43,6 +50,6 @@ export default function DonatePage() {
           </ul>
         </li>
       </ul>
-    </main>
-  );
+    </div>
+  </main>;
 }

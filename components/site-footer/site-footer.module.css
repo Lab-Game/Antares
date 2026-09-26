@@ -1,0 +1,8 @@
+.footer {
+    background: var(--brand-blue);
+    color: var(--brand-yellow);
+    padding: 16px 0;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+}

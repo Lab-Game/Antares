@@ -5,5 +5,5 @@ export const siteNavigation: { href: Route; label: string }[] = [
   { href: "/sponsors", label: "Sponsors" },
   { href: "/donate", label: "Donate" },
   { href: "/training", label: "Training" },
-  { href: "/internal", label: "Internal" },
+  // { href: "/internal", label: "Internal" },
 ];

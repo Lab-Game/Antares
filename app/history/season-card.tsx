@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./season-card.module.css";
+import { ExternalLink } from 'lucide-react';
 
 type SeasonLink = {
   label: string;
@@ -7,8 +8,10 @@ type SeasonLink = {
 };
 
 type SeasonCardProps = {
+  techBinder?: string;
   year: string;
   name: string;
+  overview?: string;
   image?: {
     src: string;
     alt: string;
@@ -18,24 +21,17 @@ type SeasonCardProps = {
 };
 
 // One card per competition season, gracefully collapsing sections whose data isn't available yet.
-export function SeasonCard({ year, name, image, blogPosts, links }: SeasonCardProps) {
-  const hasContent = image || (blogPosts && blogPosts.length > 0) || (links && links.length > 0);
-
+export function SeasonCard({ year, name, overview, image, blogPosts, links, techBinder }: SeasonCardProps) {
   return (
     <div className={styles.card}>
-      <h2 className={styles.title}>
-        <span className={styles.year}>{year}</span> {name}
-      </h2>
-
       <div className={styles.body}>
-        {image && (
-          <div className={styles.image}>
-            <Image src={image.src} alt={image.alt} fill sizes="(min-width: 760px) 360px, 100vw" />
-          </div>
-        )}
-
-        {(blogPosts && blogPosts.length > 0) || (links && links.length > 0) ? (
-          <div className={styles.columns}>
+        <h2 className={styles.title}>
+          <span className={styles.year}>{year}</span> {name}
+        </h2>
+        {overview && <p className={styles.seasonOverview}>{overview}</p>}
+        {(blogPosts && blogPosts.length > 0) || (links && links.length > 0) ? <>
+          <span className={styles.sectionTitle}>Blog</span>
+          <div>
             {blogPosts && blogPosts.length > 0 && (
               <div>
                 <ul className={styles.links}>
@@ -65,10 +61,21 @@ export function SeasonCard({ year, name, image, blogPosts, links }: SeasonCardPr
               </div>
             )}
           </div>
-        ) : null}
+        </> : null}
       </div>
 
-      {!hasContent && <p className={styles.empty}>Details coming soon.</p>}
+      {image && (
+        <div className={styles.robot}>
+          <div className={styles.image}>
+            <Image src={image.src} alt={image.alt} fill sizes="(min-width: 760px) 360px, 100vw" />
+          </div>
+          {techBinder && (
+            <a href={techBinder} className={styles.techBinderButton} target="_blank" rel="noopener noreferrer">
+              Tech Binder <ExternalLink size={15} className={styles.externalLink} />
+            </a>
+          )}
+        </div>
+      )}
     </div>
   );
 }
